@@ -4,19 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Netflix</title>
-    <link rel="stylesheet" href="../01 - HTML,CSS를 이용해서 넷플리스 사이트 만들기/style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header class="header">
         <div class="hd-logo">
-            <img class="netflix-logo" src="./images/Netflix_Logo_CMYK.png" alt="넷플릭스 로고">
+            <a href="https://netflix.com">
+                <img class="netflix-logo" src="./images/Netflix_Logo_CMYK.png" alt="넷플릭스 로고">
+            </a>
         </div>
         <div class="hd-profile">
             <img class="netflix-profile" src="./images/netflix_profile.jpg" alt="넷플릭스 프로필 이미지">
         </div>
     </header>
     <body>
-        <div class="container">
+        <section class="container">
             <div class="top-moive-info">
                 <div class="top-movie-logo">
                     <img src="https://occ-0-3076-993.1.nflxso.net/dnm/api/v6/tx1O544a9T7n8Z_G12qaboulQQE/AAAABd5jxFFy-tzcHUPks483IpfilnRXqfeNbYQCJ062KnoxcQ_3STulGVPadPOdb8mYsTdzXgxHZgi8TWx7sSHussLW0amL-rP47n1gUh2tI1E7h_68g4YvAKJoKPLuT19Z5p1f3s0WHtUNjZ7S_E0Gv_mjo9UcobpDkQvvF9gnrxD9Q37Z1sKuYA.png?r=710" alt="매니패스트 로고" class="manifest-logo">
@@ -25,13 +27,51 @@
                     비행기가 착륙하니 세계는 불가사의하게도 이미 수년이 지나있고, 시간의 흐름이 탑승객들만 비껴간 것 같다. 도착한 승객들은 기이한 새로운 현실과 마주한다.
                 </div>
             </div>
-        </div>
+        </section>
         
-        <div class="movie-list">
+        <section class="movie-list">
             <div class="list-header">
                 <h2 class="list-title">함께 시청된 콘텐츠</h2>
             </div>
-        </div>
+            <div class="movie-container">
+                <a class="movie-link" href="https://netflix.com/kr/title/80105699">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQkURxsw5FrCV_EfLatKp_fBVKLc_DMr7M0iFnasC4K8utf9k0h8kDlZpvlJ3jZBLjmuQEnKy2RzNhXFEFJ0rwBSBAGqersvHh0gHA0g6dcaJ8qRDxyGgUCB1QNVsm5cAswObQ.jpg?r=a9e" alt="시간여행자">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81008221">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRoCfGtWfsOQ1DCvFX0lh-rtv-I8PbKrhJmNUNSLTU1voU5Iat-xLSQYihm_S7MuVr_7UzcO-EOeQxLnXSNd8OLxhS7w4I5OTvda6zXtDXUO5OdOoD2DXDVyggtxUMGg-Z-ATQ.jpg?r=59e" alt="어둠 속으로">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/80214497">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABcoyMy0AuKzxPVdJH2exewM3Gj5ZoQLFAQxp1WagWHJEeytJOHzsAuKVmr6km1akWLWROrlClABifMj84Kw6x-8-aTXZRd7EBQgu2HGX19jqAckH1lkuh_ZztYUQbdKS0xWShg.jpg?r=5de" alt="1899">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81276119">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABTjrnyfZ68zOTWXZUho0nW-s3pGIsi9n9PzE_KeipmY6su9xXjSqJmLkrfhqmiRNS6omApSByAA5eso5UuuB-HYrV7EoLXH26_g66nwQjzOvVLtfBbRSOckyfxeqsagjmrDRmA.jpg?r=088" alt="숨 쉬어라">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/70283264">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABRt_51n5CrCwDu4tLwzc6tyrT5M0V2sCWOlpiABWLtvNcdtnaTgRmKeQcmPPddq9p9siRckazHMVYug9FoTxQudQZWLl3o-WleOR.jpg?r=2e7" alt="원헌드레드">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/80177458">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABepvrxam6y9cEWwaQzZ--ug0-zipKFa7GFEi4oRFzfJ_QorbxYp4KB7e5z78u2zRp8QlBGg2UNG6AczYE6wV02gqfyE2akTUUeTDztUBBU0tO7e1ZI0sdostAw2Sv2s9IQojAw.jpg?r=bf1" alt="설국열차">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81233755">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABUHLMAPD0Zn31iTCdF0bcGsTnzJdLNJzjA9lzRgM6WpMgQa3x50y89PmUMAWCgW9QyUqCUoXK4OGRWmVX0KKMGCPAJVGFDlfeak5ikixnvAUhsaMXxgEpMCAYWABfe1wdZXfHA.jpg?r=591" alt="더 데이스">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81258637">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABQfA1NmgQlRMz9gdjeSqs-f7XHL8BhJ0xfWXXkrK3r3ZpbTrx400-Nynujr9x4zeYx7E-CgHrAAdTDuo3lJVOP5rRfqQ9JAIH05Er-KmURXuxkA1cht90nKq_ZDB7D_jp3Vjew.jpg?r=bfa" alt="하프 배드: 선 & 데빌">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81288179">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABYN8k6CsBV1xahFaVa3QqbW3Kd52TfZlbCyVEESsKqKTrUgq34DBJ26fcbTisD99ffnuNhnEsvomnKkjvQG8-SDfNvEnSoZ4AsNCizJph-gKzi8d_dIHYJZz2XombuZZ9OpVkw.jpg?r=81d" alt="패러다이스">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81616256">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABbItqXGm9h0-ZCAPJ45BAM1bshInBsPg_GteKvvJpBY4WhCJD7rpYaPd2wuXPW8PiLuvfZo7oWAs4D96733MImTcZbR0r7i3NjVc.jpg?r=de0" alt="오토라는 남자">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/70264888">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABV5X7kKpQUm4fIxEOJaArs5BMw2WQ1MZS86ykGWYWqYLhGCK5BNsYyb7VHVJFIuNt6SRLUoBcbnx1w5DdZV7cFBnANJGv0nb7fSHIjdZhBH8vhRCxu34sM9a5rReKLsVfKzApQ.jpg?r=3a0" alt="블랙 미러">
+                </a>
+                <a class="movie-link" href="https://netflix.com/kr/title/81713079">
+                    <img class="movie-img" src="https://occ-0-993-395.1.nflxso.net/dnm/api/v6/6gmvu2hxdfnQ55LZZjyzYR4kzGk/AAAABZBKj06dtAgt8GLjEMJDutlNL1UwflDvE9mWbn0lxFVO5QbmSHMmfveiEkNxiL_moaAgLBxYPvdpJatw8GmOMigSp8iqVmBNg227pJrjbFoz5jLZh5K1gQ5aRALKf2n3nbvIFyzP8KRmmbNQVtaywsO77Sf-vsIb9b2urvlphQA3PT9iP97YX8boMHruMj2w6W1oFE3BziEss67XjZnra1yrUFi8c004Z3-_LpWhyagRvw2yRZyAlLReKMEcps52UYwCfj5bLhEcAX7YsmSeknjOx6kptBZQ54Id2IupDrsYnm3oU5v7uE4B7GZKcCO6Eiacz2_imH-neucFW6SFFoeFwqqxePBr8pQU4PHFCqdbsJhblJ2K2lCj9fi5vcVNLFLsjJwNQuKkpapdWpzxC_P2eYVWTkLxXRdFbp3d8uYowIU0rAj0FpeLw-i0pDR_WaNuK0b55Q.jpg?r=934" alt="오랫동안 당신을 기다렸습니다">
+                </a>
+            </div>
+        </section>
     </body>
 </body>
 </html>
