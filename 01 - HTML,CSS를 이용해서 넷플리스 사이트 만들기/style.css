@@ -13,7 +13,7 @@ html, body {
     rgba(20, 20, 20, 1) 100%);
     display: flex;
     justify-content: space-between;
-    padding : 10px;
+    padding : 10px 20px;
 }
 
 .hd-logo {
@@ -81,7 +81,8 @@ html, body {
 .movie-list {
     background-color: #181818;
     margin : 0 auto;
-    padding : 25px 5vw;
+    padding : 20px 5vw;
+    box-shadow: 1px black;
 }
 
 .list-header {
@@ -89,4 +90,25 @@ html, body {
     font-size : 25px;
     font-weight: 400;
     line-height: 34px;
+    /* margin-bottom : 10vh; */
+}
+
+.movie-container {
+    display : grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+
+.movie-link{
+    margin : 10px;
+}
+
+.movie-img {
+    width: 100%;
+}
+
+.movie-link:hover {
+    margin : 0 4px;
+}
+.movie-img:hover {
+    width : 103%;
 }
