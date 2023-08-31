@@ -1,6 +1,7 @@
 class UI {
     constructor() {
       this.profile = document.getElementById("profile");
+      this.grass = document.getElementById("grass");
     }
   
     // Display profile in UI
@@ -15,14 +16,14 @@ class UI {
             }" target="_blank" class="btn btn-primary btn-block mb-4">View Profile</a>
           </div>
           <div class="col-md-9">
-            <span class="badge badge-primary">Public Repos: ${
+            <span class="badge text-bg-primary">Public Repos: ${
               user.public_repos
             }</span>
-            <span class="badge badge-secondary">Public Gists: ${
+            <span class="badge text-bg-secondary">Public Gists: ${
               user.public_gists
             }</span>
-            <span class="badge badge-success">Followers: ${user.followers}</span>
-            <span class="badge badge-info">Following: ${user.following}</span>
+            <span class="badge text-bg-success">Followers: ${user.followers}</span>
+            <span class="badge text-bg-info">Following: ${user.following}</span>
             <br><br>
             <ul class="list-group">
               <li class="list-group-item">Company: ${user.company}</li>
@@ -33,11 +34,18 @@ class UI {
           </div>
         </div>
       </div>
-      <h3 class="page-heading mb-3">Latest Repos</h3>
-      <div id="repos"></div>
       `;
     }
-  
+    showGrass(username) {
+      this.grass.innerHTML = `
+        <div class="card card-body mb-3">
+           <img src="https://ghchart.rshah.org/${username}" />
+        </div>
+        <h3 class="page-heading mb-3">Latest Repos</h3>
+        <div id="repos"></div>
+      `;
+
+    }
     // Show user repos
     showRepos(repos) {
       let output = "";
@@ -50,13 +58,13 @@ class UI {
               <a href="${repo.html_url}" target="_blank">${repo.name}</a>
             </div>
             <div class="col-md-6">
-              <span class="badge badge-primary">Stars: ${
+              <span class="badge text-bg-primary">Stars: ${
                 repo.stargazers_count
               }</span>
-            <span class="badge badge-secondary">Watchers: ${
+            <span class="badge text-bg-secondary">Watchers: ${
               repo.watchers_count
             }</span>
-            <span class="badge badge-success">Forks: ${repo.forks_count}</span>
+            <span class="badge text-bg-success">Forks: ${repo.forks_count}</span>
             </div>
           </div>
         </div>
@@ -75,6 +83,7 @@ class UI {
       const div = document.createElement("div");
       // Add classes
       div.className = className;
+      
       // Add alert text
       div.appendChild(document.createTextNode(message));
       // Get parent element
@@ -83,7 +92,7 @@ class UI {
       const search = document.querySelector(".search");
       // Insert alert
       container.insertBefore(div, search);
-  
+      
       // Timeout after three seconds
       setTimeout(() => {
         this.clearAlert();
@@ -102,5 +111,8 @@ class UI {
     // Clear profile
     clearProfile() {
       this.profile.innerHTML = "";
+    }
+    clearGrass() {
+      this.grass.innerHTML = "";
     }
   }

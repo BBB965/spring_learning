@@ -4,7 +4,7 @@
 
 // class GitHub {
 //     constructor() {
-//         this.token = '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';
+//         this.token = '';
 //     }
 
 //     async getUser(user) {
