@@ -1,12 +1,20 @@
-import React, {useState} from "react";
+import React, {useState, useCallback} from "react";
 import "./App.css";
 import List from "./components/List";
 import Form from "./components/Form";
 
-export default function App () {
+const initialTodoData = localStorage.getItem("todoData") ? JSON.parse(localStorage.getItem("todoData")) : [] ;
 
-  const [todoData, setTodoData] = useState([]);
+function App () {
+
+  const [todoData, setTodoData] = useState(initialTodoData);
   const [value, setValue] = useState("");
+
+  const handleClick = useCallback((id) => {
+    let newTodoData = todoData.filter((data) => data.id !== id);
+    setTodoData(newTodoData);
+    localStorage.setItem('todoData', JSON.stringify(newTodoData));
+  },[todoData]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -17,7 +25,13 @@ export default function App () {
       completed: false,
     };
     setTodoData(prev => [...prev, newTodo]);
+    localStorage.setItem('todoData', JSON.stringify(...todoData, newTodo));
     setValue("");
+  };
+
+  const handleRemoveClick = () => {
+    setTodoData([]);
+    localStorage.setItem('todoData', JSON.stringify([]));
   }
 
   return (
@@ -25,12 +39,15 @@ export default function App () {
       <div className="w-full p-6 m-4 bg-white rounded shadow md:max-w-lg lg:w-3/4 lg:max-w-lg">
         <div className="flex justify-between mb-3">
           <h1>할 일 목록</h1>
+          <button onClick={handleRemoveClick}>DELETE ALL</button>
         </div>
 
         <Form value={value} setValue={setValue} handleSubmit={handleSubmit}/>
-        <List todoData={todoData} setTodoData={setTodoData}/>
+        <List todoData={todoData} setTodoData={setTodoData} handleClick={handleClick}/>
           
         </div>
       </div>
   )
 }
+
+export default App
