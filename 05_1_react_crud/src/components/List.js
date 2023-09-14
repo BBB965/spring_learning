@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 
-const List = React.memo(({id, title, money, budget, setBudget}) => {
+const List = React.memo(({id, title, money, budget, setBudget, success}) => {
 
     const [isEditing, setIsEditing] = useState(false);
     const [editedTitle, setEditedTitle] = useState(title);
@@ -8,6 +8,7 @@ const List = React.memo(({id, title, money, budget, setBudget}) => {
 
     const handleClick = (id) => {
         let newBudget = budget.filter((bud) => bud.id !== id);
+        success("예산이 삭제되었습니다!");
         setBudget(newBudget);
         localStorage.setItem('budget', JSON.stringify(newBudget));
     };
@@ -22,6 +23,7 @@ const List = React.memo(({id, title, money, budget, setBudget}) => {
             }
             return bud;
         })
+        success("예산이 수정되었습니다!");
         setBudget(newBudget);
         localStorage.setItem('budget', JSON.stringify(newBudget));
         setIsEditing(false);

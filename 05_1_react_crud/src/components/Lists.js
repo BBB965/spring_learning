@@ -1,7 +1,7 @@
 import React from 'react'
 import List from './List';
 
-const Lists = React.memo(({budget, setBudget}) => {
+const Lists = React.memo(({budget, setBudget, success}) => {
   return (
     <div>
         {budget.map((bud) => (
@@ -12,6 +12,7 @@ const Lists = React.memo(({budget, setBudget}) => {
                 money = {bud.money}
                 budget = {budget}
                 setBudget = {setBudget}
+                success = {success}
             />
         ))}
     </div>

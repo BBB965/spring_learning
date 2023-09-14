@@ -5,7 +5,7 @@ export default function Form({value, setValue, handleSubmit}) {
     const handleChange = (e) => {
         setValue(e.target.value);
       }
-    
+  
   return (
     <div>
        <form onSubmit={handleSubmit} className="flex pt-2">
